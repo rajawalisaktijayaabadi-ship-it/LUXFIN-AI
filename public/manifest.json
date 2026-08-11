@@ -1,0 +1,40 @@
+{
+  "short_name": "LUXFIN AI",
+  "name": "LUXFIN AI — Commercial Financial Operating System",
+  "description": "Commercial AI Financial Operating System dengan PWA, Offline Sync, & Multi-Category AI Alerts",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "background_color": "#0B0D10",
+  "theme_color": "#0B0D10",
+  "display": "standalone",
+  "orientation": "portrait",
+  "categories": ["finance", "productivity", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Catat Transaksi",
+      "short_name": "Tambah",
+      "description": "Tambah transaksi baru secara cepat",
+      "url": "/?action=smart-add"
+    },
+    {
+      "name": "Analisis Keuangan",
+      "short_name": "Analytics",
+      "description": "Buka dashboard grafik & laporan",
+      "url": "/?tab=analytics"
+    }
+  ]
+}

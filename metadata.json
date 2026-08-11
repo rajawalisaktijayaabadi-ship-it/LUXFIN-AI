@@ -1,0 +1,10 @@
+{
+  "name": "LUXFIN AI",
+  "description": "Premium mobile-first AI personal finance operating system for Indonesian users. Your Money. Smarter.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
