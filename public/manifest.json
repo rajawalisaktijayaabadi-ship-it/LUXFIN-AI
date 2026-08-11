@@ -4,6 +4,12 @@
   "description": "Commercial AI Financial Operating System dengan PWA, Offline Sync, & Multi-Category AI Alerts",
   "icons": [
     {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
       "src": "/icon-192.png",
       "type": "image/png",
       "sizes": "192x192",
