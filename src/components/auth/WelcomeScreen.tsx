@@ -39,6 +39,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
   // Interactive Wealth Calculator State (High CTR Click-Bait Simulator)
   const [monthlyIncome, setMonthlyIncome] = useState<number>(25000000);
   const [savingsPercent, setSavingsPercent] = useState<number>(30);
+  const [isAnnualBilling, setIsAnnualBilling] = useState<boolean>(true);
 
   const monthlySavings = (monthlyIncome * savingsPercent) / 100;
   // 3-year estimation with AI compounding optimization (+8% avg yield)
@@ -332,9 +333,102 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
               </span>
             </div>
           </div>
+        </section>        {/* 6. PRICING & LICENSE PLANS */}
+        <section className="space-y-4 pt-2">
+          <div className="text-center space-y-2">
+            <span className="text-[10px] font-bold text-[#E2B963] uppercase tracking-widest bg-[#E2B963]/10 px-3 py-1 rounded-full border border-[#E2B963]/20">
+              HARGA LISENSI RESMI
+            </span>
+            <h2 className="text-xl font-black text-white">Satu Harga Terjangkau, Akses Penuh Tanpa Batas</h2>
+            <p className="text-xs text-[#9CA3AF] max-w-xs mx-auto">
+              Nikmati seluruh keunggulan LUXFIN AI Operating System tanpa biaya tersembunyi.
+            </p>
+          </div>
+
+          {/* SINGLE PREMIUM PLAN CARD */}
+          <div className="p-6 rounded-3xl bg-gradient-to-b from-[#1A1D26] to-[#14171E] border-2 border-[#E2B963] space-y-5 relative shadow-2xl shadow-[#E2B963]/15">
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#E2B963] to-[#C59A3F] text-black text-[10px] font-black tracking-widest px-4 py-1 rounded-full uppercase shadow-lg flex items-center gap-1.5 whitespace-nowrap">
+              <Star className="w-3.5 h-3.5 fill-black" />
+              AKSES VIP FULL VERSION
+            </div>
+
+            <div className="text-center pt-2 space-y-1">
+              <h3 className="font-black text-lg text-white flex items-center justify-center gap-1.5">
+                LUXFIN AI EXECUTIVE PASS
+                <Sparkles className="w-4 h-4 text-[#E2B963]" />
+              </h3>
+              <p className="text-[11px] text-[#9CA3AF]">Akses Lengkap Seluruh Fitur AI & Finansial</p>
+            </div>
+
+            {/* Price Box */}
+            <div className="bg-black/50 p-4 rounded-2xl border border-white/5 text-center space-y-1">
+              <div className="flex items-center justify-center gap-2">
+                <span className="text-xs text-[#9CA3AF] line-through font-mono">Rp 499.000</span>
+                <span className="text-xs bg-emerald-500/20 text-emerald-400 font-bold px-2 py-0.5 rounded-full border border-emerald-500/30">
+                  DISKON PROMO
+                </span>
+              </div>
+              <div className="flex items-baseline justify-center gap-1.5">
+                <span className="text-3xl sm:text-4xl font-black text-[#E2B963] font-mono">Rp 99.000</span>
+                <span className="text-xs text-[#9CA3AF] font-bold">/ tahun</span>
+              </div>
+              <p className="text-[10px] text-[#9CA3AF] font-mono">
+                Setara dengan hanya <span className="text-emerald-400 font-bold">Rp 8.250 / bulan</span>
+              </p>
+            </div>
+
+            <ul className="space-y-2.5 text-xs text-[#F7F6F2] pt-1">
+              <li className="flex items-center gap-2.5">
+                <div className="p-1 rounded-full bg-emerald-500/20 text-emerald-400 shrink-0">
+                  <Check className="w-3.5 h-3.5" />
+                </div>
+                <span className="font-semibold">UNLIMITED Query AI Copilot & Voice Assistant</span>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <div className="p-1 rounded-full bg-emerald-500/20 text-emerald-400 shrink-0">
+                  <Check className="w-3.5 h-3.5" />
+                </div>
+                <span>Scanner Struk Belanja Auto-OCR Presisi Tinggi</span>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <div className="p-1 rounded-full bg-emerald-500/20 text-emerald-400 shrink-0">
+                  <Check className="w-3.5 h-3.5" />
+                </div>
+                <span>Calculators Mampu Beli (Affordability Engine)</span>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <div className="p-1 rounded-full bg-emerald-500/20 text-emerald-400 shrink-0">
+                  <Check className="w-3.5 h-3.5" />
+                </div>
+                <span>Pencatatan Multi-Bank, E-Wallet & Dompet Tunai</span>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <div className="p-1 rounded-full bg-emerald-500/20 text-emerald-400 shrink-0">
+                  <Check className="w-3.5 h-3.5" />
+                </div>
+                <span>Kalkulator Simulasi Utang Snowball & Avalanche</span>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <div className="p-1 rounded-full bg-emerald-500/20 text-emerald-400 shrink-0">
+                  <Check className="w-3.5 h-3.5" />
+                </div>
+                <span>Dukungan Mode PWA Offline & Enkripsi Lokal</span>
+              </li>
+            </ul>
+
+            <Button
+              variant="primary"
+              size="lg"
+              className="w-full text-sm font-black shadow-xl shadow-[#E2B963]/25"
+              onClick={onNavigateRegister}
+              rightIcon={<ArrowRight className="w-4 h-4" />}
+            >
+              Dapatkan Lisensi Rp 99rb / Tahun
+            </Button>
+          </div>
         </section>
 
-        {/* 6. SOCIAL PROOF & TESTIMONIALS */}
+        {/* 7. SOCIAL PROOF & TESTIMONIALS */}
         <section className="space-y-3">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-extrabold text-white flex items-center gap-2">
